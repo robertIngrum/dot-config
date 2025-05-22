@@ -1,8 +1,6 @@
-# Neovim Config
+# Nvim Config
 
 ```
-git clone https://github.com/robertIngrum/neovim-config
-
 ln -s ~/path/to/dir ~/.config/nvim
 ```
 
