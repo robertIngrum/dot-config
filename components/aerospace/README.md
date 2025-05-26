@@ -8,3 +8,8 @@
 ln -s ~/src/github.com/robertIngrum/dot-config/components/aerospace/.aerospace.toml .aerospace.toml
 ```
 
+To install the border, run:
+```
+brew tap FelixKratz/formulae
+brew install borders
+```
