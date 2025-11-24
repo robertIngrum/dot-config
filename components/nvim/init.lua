@@ -314,7 +314,7 @@ require('mason').setup()
 require('mason-lspconfig').setup()
 
 require('nvim-treesitter.configs').setup({
-	ensure_installed = { "lua", "vim", "vimdoc", "query", "javascript", "typescript", "markdown", "markdown_inline", "html", "css" },
+	ensure_installed = { "lua", "vim", "vimdoc", "query", "javascript", "typescript", "markdown", "markdown_inline", "html", "css", "ruby" },
 	sync_installed = false,
 	auto_install = true,
 	highlight = {
