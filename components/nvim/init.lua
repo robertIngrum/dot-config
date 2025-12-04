@@ -16,7 +16,7 @@ vim.opt.smartcase = true
 vim.opt.wrap = false
 vim.opt.signcolumn = 'yes'
 
-vim.diagnostic.config({ virtual_lines = true })
+-- vim.diagnostic.config({ virtual_lines = true })
 vim.diagnostic.config({ virtual_text = true })
 
 -- Clipboard
@@ -91,9 +91,9 @@ end, { silent = true, noremap = true })
 
 -- keybinds to move in insert mode
 vim.keymap.set('i', '<C-h>', '<Left>')
+vim.keymap.set('i', '<C-l>', '<Right>')
 vim.keymap.set('i', '<C-j>', '<Down>')
 vim.keymap.set('i', '<C-k>', '<Up>')
-vim.keymap.set('i', '<C-l>', '<Right>')
 
 ------------------------
 -- Basic Autocommands --
