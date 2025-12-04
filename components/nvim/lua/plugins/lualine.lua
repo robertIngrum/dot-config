@@ -1,7 +1,10 @@
 return {
 	'nvim-lualine/lualine.nvim',
 	opts = {
-		theme = 'tokyonight',
+		options = {
+			icons_enabled = true,
+			theme = 'tokyonight',
+		}
 	},
 }
 
