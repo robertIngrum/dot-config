@@ -52,11 +52,19 @@ return {
 
 		return {
 			auto_brackets = {}, -- configure any filetype to auto add brackets
-      completion = {
-        completeopt = "menu,menuone,noinsert" .. (auto_select and "" or ",noselect"),
-      },
-      preselect = auto_select and cmp.PreselectMode.Item or cmp.PreselectMode.None,
-      mapping = cmp.mapping.preset.insert({
+			completion = {
+				completeopt = "menu,menuone,noinsert" .. (auto_select and "" or ",noselect"),
+			},
+			preselect = auto_select and cmp.PreselectMode.Item or cmp.PreselectMode.None,
+			enabled = function()
+				local disabled = false
+				disabled = disabled or (vim.api.nvim_get_option_value('buftype', { buf = 0 }) == 'prompt')
+				disabled = disabled or (vim.fn.reg_recording() ~= '')
+				disabled = disabled or (vim.fn.reg_executing() ~= '')
+				disabled = disabled or require('cmp.config.context').in_treesitter_capture('comment')
+				return not disabled
+			end,
+			mapping = cmp.mapping.preset.insert({
 				["<C-j>"] = cmp.mapping(function(fallback)
 					if cmp.visible() then
 						cmp.select_next_item()
@@ -68,6 +76,7 @@ return {
 					if cmp.visible() then
 						cmp.select_prev_item()
 					else
+						vim.
 						fallback()
 					end
 				end, { 'i', 's' }),
@@ -81,6 +90,7 @@ return {
         ["<C-b>"] = cmp.mapping.scroll_docs(-4),
         ["<C-f>"] = cmp.mapping.scroll_docs(4),
         ["<C-Space>"] = cmp.mapping.complete(),
+				["<Tab>"] = cmp_util.confirm({ select = auto_select }),
         ["<CR>"] = cmp_util.confirm({ select = auto_select }),
       }),
       sources = cmp.config.sources({

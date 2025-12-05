@@ -51,6 +51,9 @@ vim.opt.shiftwidth = 2
 
 vim.opt.confirm = true
 
+-- Used for auto-session
+vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+
 -- Keybindings
 ---- Bind Space + w to call the write command
 vim.keymap.set('n', '<leader>w', '<cmd>write<cr>', {desc = 'Save'})

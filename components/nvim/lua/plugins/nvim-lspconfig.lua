@@ -13,6 +13,7 @@ return {
 			map("n", "gD", vim.lsp.buf.declaration, opts "Go to declaration")
 			map("n", "gd", vim.lsp.buf.definition, opts "Go to definition")
 			map("n", "<leader>D", vim.lsp.buf.type_definition, opts "Go to type definition")
+			map("n", "<leader>ca", vim.lsp.buf.code_action, opts "Perform Code Action")
 		end
 
 		M.capabilities = vim.lsp.protocol.make_client_capabilities()
