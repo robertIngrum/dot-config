@@ -1,6 +1,13 @@
-# Hello world
 font-family = SauceCodePro NFM
 font-family-bold = SauceCodePro NFM Bold
 font-family-italic = SauceCodePro NFM Italic
 font-family-bold-italic = SauceCodePro NFM Bold Italic
+
+theme = Cutie Pro
+palette-generate = true
+
+background-opacity = .95
+background-blur = 20
+
+cursor-click-to-move = true
 

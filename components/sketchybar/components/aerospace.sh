@@ -10,8 +10,8 @@ for monitor_id in $(aerospace list-monitors --format "%{monitor-id}"); do
 	visible_workspace_ids=$(aerospace list-workspaces --monitor "$monitor_id")
 
 	# Draw monitor identifier
-	sketchybar --add item monitor."$monitor_id" left \
-		--set monitor."$monitor_id" \
+	sketchybar --add item "monitor.$monitor_id" left \
+		--set "monitor.$monitor_id" \
 		display="$monitor_id" \
 		icon="$monitor_id" \
 		icon.padding_left=$PADDING \
@@ -20,7 +20,7 @@ for monitor_id in $(aerospace list-monitors --format "%{monitor-id}"); do
 		icon.width=50 \
 		icon.y_offset=1 \
 		icon.color=0xffffffff \
-		label.drawing=off
+		label.drawing=on
 
 	# Draw workspace identifiers
 	for workspace_id in $all_workspace_ids; do
