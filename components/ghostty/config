@@ -11,3 +11,5 @@ background-blur = 20
 
 cursor-click-to-move = true
 
+window-decoration = true
+
