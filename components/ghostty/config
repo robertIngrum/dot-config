@@ -3,7 +3,7 @@ font-family-bold = SauceCodePro NFM Bold
 font-family-italic = SauceCodePro NFM Italic
 font-family-bold-italic = SauceCodePro NFM Bold Italic
 
-theme = Cutie Pro
+theme = TokyoNight Night
 palette-generate = true
 
 background-opacity = .95
