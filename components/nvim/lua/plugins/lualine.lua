@@ -1,3 +1,5 @@
+-- The status line!
+
 return {
 	'nvim-lualine/lualine.nvim',
 	opts = {

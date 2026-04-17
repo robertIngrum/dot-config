@@ -14,10 +14,27 @@ return {
 		{ 'nvim-tree/nvim-web-devicons' },
 	},
 	config = function()
+		local actions = require "telescope.actions"
+
 		-- Two important keymaps to use while in Telescope are:
 		--  - Insert mode: <c-/>
 		--  - Normal mode: ?
 		require('telescope').setup {
+			pickers = {
+				buffers = {
+					mappings = {
+						i = {
+							["<M-c>"] = actions.delete_buffer + actions.move_to_top,
+							["<Tab>"] = actions.move_selection_next,
+							["<S-Tab>"] = actions.move_selection_previous,
+						},
+						n = {
+							["<Tab>"] = actions.move_selection_next,
+							["<S-Tab>"] = actions.move_selection_previous,
+						},
+					},
+				},
+			},
 			extensions = {
 				['ui-select'] = {
 					require('telescope.themes').get_dropdown(),

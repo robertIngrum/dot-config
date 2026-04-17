@@ -1,3 +1,5 @@
+-- This is the file tree
+
 local function my_on_attach(bufnr)
 	local api = require "nvim-tree.api"
 

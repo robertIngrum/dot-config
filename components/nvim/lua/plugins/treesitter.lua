@@ -1,3 +1,5 @@
+-- Holy crap, can't believe this was archived. Going to keep using it until it's rolled into nvim core.
+
 return {
 	"nvim-treesitter/nvim-treesitter",
 	event = { "BufReadPost", "BufNewFile" },

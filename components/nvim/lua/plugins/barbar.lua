@@ -1,3 +1,5 @@
+-- Used for the top line of tabs.
+
 return {
 	'romgrk/barbar.nvim',
 	dependencies = {
@@ -12,14 +14,13 @@ return {
 
 
 		-- Move to previous/next
-		map('n', '<A-,>', '<Cmd>BufferPrevious<CR>', opts)
-		map('n', '<A-.>', '<Cmd>BufferNext<CR>', opts)
+		-- map('n', '<A-,>', '<Cmd>BufferPrevious<CR>', opts)
+		-- map('n', '<A-.>', '<Cmd>BufferNext<CR>', opts)
 
 		-- Re-order to previous/next
-		map('n', '<A-<>', '<Cmd>BufferMovePrevious<CR>', opts)
-		map('n', '<A->>', '<Cmd>BufferMoveNext<CR>', opts)
+		-- map('n', '<A-<>', '<Cmd>BufferMovePrevious<CR>', opts)
+		-- map('n', '<A->>', '<Cmd>BufferMoveNext<CR>', opts)
 
-		-- TODO: These overlap with aerospace commands
 		-- Goto buffer in position...
 		-- map('n', '<A-1>', '<Cmd>BufferGoto 1<CR>', opts)
 		-- map('n', '<A-2>', '<Cmd>BufferGoto 2<CR>', opts)
@@ -46,6 +47,7 @@ return {
 		--                 :BufferWipeout
 
 		-- Close commands
+		map('n', '<A-C>', '<Cmd>BufferCloseAllButCurrent<CR>', opts)
 		--                 :BufferCloseAllButCurrent
 		--                 :BufferCloseAllButPinned
 		--                 :BufferCloseAllButCurrentOrPinned
@@ -53,15 +55,15 @@ return {
 		--                 :BufferCloseBuffersRight
 
 		-- Magic buffer-picking mode
-		map('n', '<C-p>',   '<Cmd>BufferPick<CR>', opts)
-		map('n', '<C-s-p>', '<Cmd>BufferPickDelete<CR>', opts)
+		-- map('n', '<C-p>',   '<Cmd>BufferPick<CR>', opts)
+		-- map('n', '<C-s-p>', '<Cmd>BufferPickDelete<CR>', opts)
 
 		-- Sort automatically by...
-		map('n', '<Space>bb', '<Cmd>BufferOrderByBufferNumber<CR>', opts)
-		map('n', '<Space>bn', '<Cmd>BufferOrderByName<CR>', opts)
-		map('n', '<Space>bd', '<Cmd>BufferOrderByDirectory<CR>', opts)
-		map('n', '<Space>bl', '<Cmd>BufferOrderByLanguage<CR>', opts)
-		map('n', '<Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>', opts)
+		-- map('n', '<Space>bb', '<Cmd>BufferOrderByBufferNumber<CR>', opts)
+		-- map('n', '<Space>bn', '<Cmd>BufferOrderByName<CR>', opts)
+		-- map('n', '<Space>bd', '<Cmd>BufferOrderByDirectory<CR>', opts)
+		-- map('n', '<Space>bl', '<Cmd>BufferOrderByLanguage<CR>', opts)
+		-- map('n', '<Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>', opts)
 	end,
 	opts = {
 		animation = true,

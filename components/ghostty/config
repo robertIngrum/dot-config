@@ -1,3 +1,5 @@
+custom-shader = ./shaders/cursor-trail.glsl
+
 font-family = SauceCodePro NFM
 font-family-bold = SauceCodePro NFM Bold
 font-family-italic = SauceCodePro NFM Italic

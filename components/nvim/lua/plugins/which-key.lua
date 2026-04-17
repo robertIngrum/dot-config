@@ -1,3 +1,5 @@
+-- Little popup at the bottom of the screen to help remember keybinds
+
 return {
 	'folke/which-key.nvim',
 	opts = {

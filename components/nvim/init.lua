@@ -56,7 +56,7 @@ vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,
 
 -- Keybindings
 ---- Bind Space + w to call the write command
-vim.keymap.set('n', '<leader>w', '<cmd>write<cr>', {desc = 'Save'})
+vim.keymap.set('n', '<leader>w', '<cmd>silent! write<cr>', {desc = 'Save'})
 
 -- Bind File Explorer
 vim.keymap.set('n', '<leader>f', '<cmd>NvimTreeFocus<cr>')
@@ -181,7 +181,6 @@ lazy.opts = {}
 
 lazy.setup({
 	{ import = 'plugins' },
-
 })
 
 vim.opt.termguicolors = true
